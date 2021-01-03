@@ -9,9 +9,9 @@
 
 <body>
 <?php
-$dbhost = 'remotemysql.com';
-$dbuser = 'mYbI3h9znQ';
-$dbpass = 'sLHdVNF0kV';
+$dbhost = 'DB_URL here';
+$dbuser = 'DB_USERNAME here';
+$dbpass = 'DB_PASSWORD here';
 $conn = mysqli_connect($dbhost, $dbuser, $dbpass);
 
 if (!$conn) {
