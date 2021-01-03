@@ -1,7 +1,7 @@
 <?php
-$dbhost = 'remotemysql.com:3306';
-$dbuser = 'mYbI3h9znQ';
-$dbpass = 'sLHdVNF0kV';
+$dbhost = 'DB_URL';
+$dbuser = 'DB_USERNAME';
+$dbpass = 'DB_PASS';
 $conn = mysqli_connect($dbhost, $dbuser, $dbpass);
 
 if (!$conn) {
