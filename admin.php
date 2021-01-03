@@ -17,6 +17,14 @@
             <input type="text" name="p2">
         </div>
         <div>
+            <span>Update Image source: </span>
+            <input type="text" name="image">
+        </div>
+        <div>
+            <span>Update Youtube video url: </span>
+            <input type="text" name="video">
+        </div>
+        <div>
             <span>Update Data for Paragraph 3: </span>
             <input type="text" name="p3">
         </div>
