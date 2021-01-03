@@ -1,5 +1,5 @@
-# PHP Project for Internship
-This is the internship evaluation repository for Perfect PlanB
+# PHP Project
+Codebase for PHP Project
 
 ## Tasks Completed:
 1. Created the template layout.
@@ -21,5 +21,7 @@ They also have been assigned unique names such as p1 for Paragraph 1 etc.
 4. Font Colors for Buttons 1 and 2.
 
 Entry file is index.php
+
 Admin panel file is admin.php
+
 Form actions code has been written in form.php
