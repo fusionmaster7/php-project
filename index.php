@@ -80,9 +80,39 @@ if (mysqli_num_rows($result) > 0) {
     <iframe height="720" width="1280" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
 </div>
 <br />
-        <div class="centered"><button>Button 1</button></div>
-        <div class="centered">Paragraph 3</div>
-        <div class="centered"><button>Button 2</button></div>
+        <div class="centered">
+        <?php
+$query = "select * from data where id = 6;";
+$result = mysqli_query($conn, $query);
+if (mysqli_num_rows($result) > 0) {
+    while ($row = mysqli_fetch_assoc($result)) {
+        echo '<button class="btn" style="color:' . $row["value"] . ';">Button 1</button>';
+    }
+}
+?>
+</div>
+        <div class="centered">
+        <?php
+$query = "select * from data where id=5;";
+$result = mysqli_query($conn, $query);
+if (mysqli_num_rows($result) > 0) {
+    while ($row = mysqli_fetch_assoc($result)) {
+        echo '<p>' . $row["value"] . '</p>';
+    }
+}
+?>
+        </div>
+        <div class="centered">
+        <?php
+$query = "select * from data where id = 8;";
+$result = mysqli_query($conn, $query);
+if (mysqli_num_rows($result) > 0) {
+    while ($row = mysqli_fetch_assoc($result)) {
+        echo '<button class="btn" style="color:' . $row["value"] . ';">Button 2</button>';
+    }
+}
+?>
+</div>
         <div class="timer-container">
             <div id="timer"></div>
             <button>Second button here </button>
