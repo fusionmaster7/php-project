@@ -1,5 +1,5 @@
-# PHP Project for Internship
-This is the internship evaluation repository for Perfect PlanB
+# PHP Project
+Codebase for PHP Project
 
 ## Tasks Completed:
 1. Created the template layout.
