@@ -15,7 +15,7 @@ $dbpass = 'sLHdVNF0kV';
 $conn = mysqli_connect($dbhost, $dbuser, $dbpass);
 
 if (!$conn) {
-    die('Could not connect: ' . mysqli_error());
+    die('Could not connect' . mysqli_error());
 }
 
 $query = "USE mYbI3h9znQ";
