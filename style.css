@@ -42,3 +42,7 @@ iframe {
   display: flex;
   justify-content: space-evenly;
 }
+
+#timer {
+  font-size: 20px;
+}

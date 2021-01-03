@@ -84,11 +84,11 @@ if (mysqli_num_rows($result) > 0) {
         <div class="centered">Paragraph 3</div>
         <div class="centered"><button>Button 2</button></div>
         <div class="timer-container">
-            <div>Timer here</div>
+            <div id="timer"></div>
             <button>Second button here </button>
     </div>
     <div class="centered">
-        <button onclick="hideTimer()">Toggle Visibility</button>
+        <button onclick="toggleTimer()">Toggle Timer</button>
     </div>
     <script type="text/javascript" src="./script.js"></script>
 </body>
