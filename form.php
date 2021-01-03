@@ -1,14 +1,15 @@
 <?php
-$dbhost = 'localhost:3306';
-$dbuser = 'hardik';
-$dbpass = 'zoro1803';
+$dbhost = 'remotemysql.com:3306';
+$dbuser = 'mYbI3h9znQ';
+$dbpass = 'sLHdVNF0kV';
 $conn = mysqli_connect($dbhost, $dbuser, $dbpass);
 
 if (!$conn) {
     die('Could not connect: ' . mysqli_error());
 }
 
-$query = "USE PROJECT";
+$query = "USE mYbI3h9znQ";
+
 mysqli_query($conn, $query);
 
 foreach ($_POST as $key => $value) {
