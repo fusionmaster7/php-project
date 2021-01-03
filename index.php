@@ -18,11 +18,9 @@ if (!$conn) {
     die('Could not connect: ' . mysqli_error());
 }
 
-$sql = "CREATE DATABASE PROJECT;";
+$query = "USE PROJECT";
+mysqli_query($conn, $query);
 
-if (mysqli_query($conn, $sql)) {
-    echo 'DB Created';
-}
 ?>
     <!--HEADER -->
     <div class="header-container">
@@ -32,9 +30,52 @@ if (mysqli_query($conn, $sql)) {
     <!--CONTAINER -->
     <div class="container">
         <div>
-            Container 1
+            <?php
+$query = "select * from data where id=1;";
+$result = mysqli_query($conn, $query);
+if (mysqli_num_rows($result) > 0) {
+    while ($row = mysqli_fetch_assoc($result)) {
+        echo '<p>' . $row["value"] . '</p>';
+    }
+}
+?>
         </div>
-        <div>Container 2</div>
+        <div>
+            <div>
+            <?php
+$query = "select * from data where id = 2;";
+$result = mysqli_query($conn, $query);
+if (mysqli_num_rows($result) > 0) {
+    while ($row = mysqli_fetch_assoc($result)) {
+        echo '<h1>' . $row["value"] . '</h1>';
+    }
+}
+?>
+        </div>
+        <div>
+        <?php
+$query = "select * from data where id = 3;";
+$result = mysqli_query($conn, $query);
+if (mysqli_num_rows($result) > 0) {
+    while ($row = mysqli_fetch_assoc($result)) {
+        echo '<img src=' . $row["value"] . '/>';
+    }
+}
+?>
+    </div>
+    <div>
+            <?php
+$query = "select * from data where id=4;";
+$result = mysqli_query($conn, $query);
+if (mysqli_num_rows($result) > 0) {
+    while ($row = mysqli_fetch_assoc($result)) {
+        echo '<p>' . $row["value"] . '</p>';
+    }
+}
+?>
+        </div>
+        </div>
+
     </div>
     <script type="text/javascript" src="./script.js"></script>
 </body>
