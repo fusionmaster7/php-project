@@ -75,7 +75,20 @@ if (mysqli_num_rows($result) > 0) {
 ?>
         </div>
         </div>
-
+    </div>
+    <div class="video-container">
+    <iframe height="720" width="1280" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+</div>
+<br />
+        <div class="centered"><button>Button 1</button></div>
+        <div class="centered">Paragraph 3</div>
+        <div class="centered"><button>Button 2</button></div>
+        <div class="timer-container">
+            <div>Timer here</div>
+            <button>Second button here </button>
+    </div>
+    <div class="centered">
+        <button onclick="hideTimer()">Toggle Visibility</button>
     </div>
     <script type="text/javascript" src="./script.js"></script>
 </body>
