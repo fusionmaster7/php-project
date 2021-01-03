@@ -1,7 +1,7 @@
 <?php
-$dbhost = 'localhost:3306';
-$dbuser = 'hardik';
-$dbpass = 'zoro1803';
+$dbhost = 'DB_HOST';
+$dbuser = 'DB_USERNAME';
+$dbpass = 'DB_PASS';
 $conn = mysqli_connect($dbhost, $dbuser, $dbpass);
 
 if (!$conn) {
