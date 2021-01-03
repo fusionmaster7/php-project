@@ -29,6 +29,7 @@ mysqli_query($conn, $query);
 
     <!--CONTAINER -->
     <div class="container">
+        <!--PARAGRAPH 1-->
         <div>
             <?php
 $query = "select * from data where id=1;";
@@ -41,6 +42,7 @@ if (mysqli_num_rows($result) > 0) {
 ?>
         </div>
         <div>
+        <!--HEADING-->
             <div>
             <?php
 $query = "select * from data where id = 2;";
@@ -53,6 +55,7 @@ if (mysqli_num_rows($result) > 0) {
 ?>
         </div>
         <div>
+        <!--IMAGE-->
         <?php
 $query = "select * from data where id = 3;";
 $result = mysqli_query($conn, $query);
@@ -64,6 +67,7 @@ if (mysqli_num_rows($result) > 0) {
 ?>
     </div>
     <div>
+    <!--PARAGRAPH-->
             <?php
 $query = "select * from data where id=4;";
 $result = mysqli_query($conn, $query);
@@ -76,8 +80,18 @@ if (mysqli_num_rows($result) > 0) {
         </div>
         </div>
     </div>
+    <!--VIDEO -->
     <div class="video-container">
-    <iframe height="720" width="1280" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+    <?php
+$query = "select * from data where id=7;";
+$result = mysqli_query($conn, $query);
+if (mysqli_num_rows($result) > 0) {
+    while ($row = mysqli_fetch_assoc($result)) {
+        echo '<iframe height="720" width="1280" src="' . $row["value"] . '"></iframe>';
+    }
+
+}
+?>
 </div>
 <br />
         <div class="centered">
@@ -86,11 +100,12 @@ $query = "select * from data where id = 6;";
 $result = mysqli_query($conn, $query);
 if (mysqli_num_rows($result) > 0) {
     while ($row = mysqli_fetch_assoc($result)) {
-        echo '<button class="btn" style="color:' . $row["value"] . ';">Button 1</button>';
+        echo '<a href="/admin.php"><button class="btn" onclick="adminHandler()" style="color:' . $row["value"] . ';">Button 1</button></a>';
     }
 }
 ?>
 </div>
+        <!--PARAGRAPH 3-->
         <div class="centered">
         <?php
 $query = "select * from data where id=5;";
@@ -108,7 +123,7 @@ $query = "select * from data where id = 8;";
 $result = mysqli_query($conn, $query);
 if (mysqli_num_rows($result) > 0) {
     while ($row = mysqli_fetch_assoc($result)) {
-        echo '<button class="btn" style="color:' . $row["value"] . ';">Button 2</button>';
+        echo '<a href="/admin.php"><button class="btn" style="color:' . $row["value"] . ';">Button 2</button></a>';
     }
 }
 ?>
