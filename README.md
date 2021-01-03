@@ -21,5 +21,7 @@ They also have been assigned unique names such as p1 for Paragraph 1 etc.
 4. Font Colors for Buttons 1 and 2.
 
 Entry file is index.php
+
 Admin panel file is admin.php
+
 Form actions code has been written in form.php
